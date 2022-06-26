@@ -58,4 +58,96 @@ Mostre o restultado com duas casas decimais
 
 
 def calcular_preco_da_compra(kilos_de_morango: int, kilos_de_maca: int):
-    """Escreva aqui em baixo a sua solução"""
+    kg_total = kilos_de_morango + kilos_de_maca
+    valor_total = (kilos_de_morango * 2.50) + (kilos_de_maca * 1.80)
+    if kilos_de_morango and kilos_de_maca:
+        if (kilos_de_morango <= 5 and kilos_de_maca <= 5) and kg_total < 8 and valor_total < 25:
+            valor_morango = (kilos_de_morango * 2.50)
+            valor_maca = (kilos_de_maca * 1.80)
+            valor_a_pagar = valor_morango + valor_maca
+            print(
+             f'(+)  Morango  - valor:  R$  {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.50/kg')
+            print(
+             f'(+)  Maça     - valor:  R$  {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$  {valor_a_pagar:.2f}')
+
+        elif (kilos_de_morango <= 5 and kilos_de_maca > 5) and kg_total < 8 and valor_total < 25:
+            valor_morango = (kilos_de_morango * 2.20)
+            valor_maca = (kilos_de_maca * 1.50)
+            valor_a_pagar = (valor_morango + valor_maca)
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(+)  Maça     - valor:  R$ {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$ {valor_a_pagar:.2f}')
+
+        elif (kilos_de_morango > 5 and kilos_de_maca <= 5) and kg_total < 8 and valor_total < 25:
+            valor_morango = (kilos_de_morango * 2.50)
+            valor_maca = (kilos_de_maca * 1.50)
+            valor_a_pagar = (valor_morango + valor_maca)
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(+)  Maça     - valor:  R$  {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$ {valor_a_pagar:.2f}')
+
+        elif (kilos_de_morango > 5 and kilos_de_maca <= 5) and (kg_total > 8 or valor_total < 25):
+            valor_morango = (kilos_de_morango * 2.20)
+            valor_maca = (kilos_de_maca * 1.80)
+            desconto = ((valor_morango + valor_maca) * 10) / 100
+            valor_a_pagar = (valor_morango + valor_maca) - desconto
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(+)  Maça     - valor:  R$  {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg')
+            print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+            print(f'          Valor Total:  R$ {valor_a_pagar:.2f}')
+
+        elif (kilos_de_morango > 5 and kilos_de_maca > 5) and kg_total >= 8 or valor_total >= 25:
+            valor_morango = (kilos_de_morango * 2.20)
+            valor_maca = (kilos_de_maca * 1.50)
+            desconto = ((valor_morango + valor_maca) * 10) / 100
+            valor_a_pagar = (valor_morango + valor_maca) - desconto
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(+)  Maça     - valor:  R$ {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg')
+            print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+            print(f'          Valor Total:  R$ {valor_a_pagar:.2f}')
+
+    if kilos_de_morango and not kilos_de_maca:
+        if kilos_de_morango <= 5:
+            valor_morango = (kilos_de_morango * 2.50)
+            print(f'(+)  Morango  - valor:  R$  {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.50/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$  {valor_morango:.2f}')
+
+        elif kilos_de_morango > 5 and kg_total < 8:
+            valor_morango = (kilos_de_morango * 2.20)
+            total = valor_morango
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$ {total:.2f}')
+        elif kilos_de_morango > 5 and kg_total >= 8:
+            valor_morango = (kilos_de_morango * 2.20)
+            desconto = (valor_morango * 10) / 100
+            total = valor_morango - desconto
+            print(f'(+)  Morango  - valor:  R$ {valor_morango:.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg')
+            print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+            print(f'          Valor Total:  R$ {total:.2f}')
+
+    if not kilos_de_morango and kilos_de_maca:
+        if kilos_de_maca <= 5:
+            valor_maca = (kilos_de_maca * 1.80)
+            print(f'(+)  Maça     - valor:  R$  {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$  {valor_maca:.2f}')
+        elif kilos_de_maca > 5 and kg_total < 8:
+            valor_maca = (kilos_de_maca * 1.50)
+            total = valor_maca
+            print(f'(+)  Maça     - valor:  R$  {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg')
+            print(f'(-)  Desconto - valor:  R$  0.00')
+            print(f'          Valor Total:  R$  {total:.2f}')
+        elif kilos_de_maca > 5 and kg_total >= 8:
+            valor_maca = (kilos_de_maca * 1.50)
+            desconto = (valor_maca * 10) / 100
+            total = valor_maca - desconto
+            print(f'(+)  Maça     - valor:  R$ {valor_maca:.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg')
+            print(f'(-)  Desconto - valor:  R$  {desconto:.2f}')
+            print(f'          Valor Total:  R$ {total:.2f}')
+

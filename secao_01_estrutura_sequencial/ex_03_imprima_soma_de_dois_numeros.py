@@ -14,4 +14,6 @@ Faça um Programa que peça dois números inteiros e imprima a soma.
 
 
 def imprima_a_soma_de_dois_numeros():
-    """Escreva aqui em baixo a sua solução"""
+    num1 = int(input('Digite o primeiro numero: '))
+    num2 = int(input('Digite o segundo numero: '))
+    print(f'A soma dos dois números informados é {num1 + num2}')

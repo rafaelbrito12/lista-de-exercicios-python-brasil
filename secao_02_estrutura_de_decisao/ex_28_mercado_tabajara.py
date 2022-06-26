@@ -46,4 +46,87 @@ Mostre o restultado com duas casas decimais
 
 
 def calcular_preco_da_carne(tipo_de_carne: str, kilos_de_carne: int, forma_de_pagamento: str) -> str:
-    """Escreva aqui em baixo a sua solução"""
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne <= 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 4.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 4.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne <= 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 4.90
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 4.90/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne > 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 5.80
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.80/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne > 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 5.80
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.80/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne < 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 4.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 4.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+
+    if tipo_de_carne == 'Filé Duplo' and kilos_de_carne > 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 5.80
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.80/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne <= 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 5.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne <= 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 5.90
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.90/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne > 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 6.80
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.80/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne > 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 6.80
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.80/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne > 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 5.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+
+    if tipo_de_carne == 'Alcatra' and kilos_de_carne > 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 5.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 5.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne <= 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 6.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne <= 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 6.90
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.90/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne > 5 and forma_de_pagamento == 'dinheiro':
+        kilos = kilos_de_carne * 7.80
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 7.80/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com dinheiro'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne > 5 and forma_de_pagamento == 'cartão tabajara':
+        kilos = kilos_de_carne * 7.80
+        desconto = kilos * 5 / 100
+        valor = kilos - desconto
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 7.80/kg saem a R$ {kilos:.2f}. Com desconto de 5% pelo pagamento feito com cartão tabajara, fica R$ {valor:.2f}'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne > 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 6.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+
+    if tipo_de_carne == 'Picanha' and kilos_de_carne > 5 and forma_de_pagamento == 'pix':
+        kilos = kilos_de_carne * 6.90
+        return f'{kilos_de_carne} kg de {tipo_de_carne} a R$ 6.90/kg saem a R$ {kilos:.2f}. Não há desconto, pagamento feito com pix'
+

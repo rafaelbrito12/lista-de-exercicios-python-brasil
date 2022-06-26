@@ -20,5 +20,12 @@ arredondamento.
 """
 
 
+from pickletools import read_uint1
+
+
 def decidir_se_eh_inteiro_ou_decimal(valor: str) -> str:
-    """Escreva aqui em baixo a sua solução"""
+    if float(valor).is_integer():
+        return 'Inteiro'
+    else:
+        return 'Decimal'
+        

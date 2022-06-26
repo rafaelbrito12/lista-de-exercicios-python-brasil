@@ -30,4 +30,131 @@ Mostre o restultado com duas casas decimais
 
 
 def fazer_operacao_e_classificar(n_1: float, n_2: float, operacao: str):
-    """Escreva aqui em baixo a sua solução"""
+    soma = n_1 + n_2
+    subtracao = n_1 - n_2
+    divisao = n_1 / n_2
+    multiplicacao = n_1 * n_2
+
+    if operacao == '+':
+        resultado = float(soma)
+        if resultado.is_integer() and resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e inteiro.')
+        elif resultado.is_integer() and resultado == 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, neutro e inteiro.')
+        elif resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e decimal.')
+        elif resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e decimal.')
+        elif resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e decimal.')
+        elif resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e decimal.')
+
+    if operacao == '/':
+        resultado = float(divisao)
+        if resultado.is_integer() and resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e inteiro.')
+        elif resultado.is_integer() and resultado == 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, neutro e inteiro.')
+        elif resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e decimal.')
+        elif resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e decimal.')
+        elif resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e decimal.')
+        elif resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e decimal.')
+
+    if operacao == '-':
+        resultado = float(subtracao)
+        if resultado.is_integer() and resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e inteiro.')
+        elif resultado.is_integer() and resultado == 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, neutro e inteiro.')
+        elif resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é positivo e decimal.')
+        elif resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e decimal.')
+        elif resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é positivo e decimal.')
+        elif resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e decimal.')
+
+    if operacao == '*':
+        resultado = float(multiplicacao)
+        if resultado.is_integer() and resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e inteiro.')
+        elif resultado.is_integer() and resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, negativo e inteiro.')
+        elif resultado.is_integer() and resultado == 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, neutro e inteiro.')
+        elif resultado % 2 == 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, positivo e decimal.')
+        elif resultado % 2 == 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é par, negativo e decimal.')
+        elif resultado % 2 != 0 and resultado > 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é impar, positivo e decimal.')
+        elif resultado % 2 != 0 and resultado < 0:
+            print(f'Resultado: {resultado:.2f}')
+            print('Número é negativo e decimal.')
+        elif resultado == 0:
+            print(f'Resultado: {resultado}')
+            print('Número é par, neutro e inteiro.')
+            
